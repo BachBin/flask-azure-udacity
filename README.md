@@ -1,34 +1,39 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+Our goal for this project is to create a brand-new Github repository from scratch and set up the essential framework for implementing both Continuous Integration and Continuous Delivery seamlessly.
+
+To achieve this, we plan to employ Github Actions alongside a Makefile, requirements.txt, and our application code to perform an initial process that includes linting, testing, and installation.
+
+Furthermore, we aim to seamlessly integrate this project with Azure Pipelines to streamline Continuous Delivery to Azure App Service. Throughout this undertaking, we will take advantage of Azure Cloud Shell for enhanced efficiency.
 
 ## Project Plan
-<TODO: Project Plan
-
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* [Trello Plan](https://trello.com/b/INHJj0VK)
+* [Master Plan](https://docs.google.com/spreadsheets/d/1SgUDdwUD-Np5UactcMUsw3ugj6FKltMeTi2TVjCktIw/edit?usp=sharing)
 
 ## Instructions
+* Architectural Diagram
+![Architectural Diagram](/images/ArchitecturalDiagram.png)
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+## Config Github
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+* First of all, we need to create a ssh key for access to Github.
 
-* Project running on Azure App Service
+* Create a ssh key:
+To generate an SSH key, you can use the following command in your terminal or command prompt:
+    ```
+    ssh-keygen -t rsa -b 2048 -C "bachvanmanh06072000@gmail.com"
+    ```
 
-* Project cloned into Azure Cloud Shell
+* Copy your key to SSH and GPG keys
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+* Screenshot of SSH Key in Github:
+![SSH Key](/images/SSHKeys.png)
 
-* Output of a test run
+* Run Github Actions
+![Github Actions](/images/GithubActions.png)
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+## Project Locally
 
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
 
 ```bash
 udacity@Azure:~$ ./make_predict_azure_app.sh
