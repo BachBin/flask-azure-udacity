@@ -58,65 +58,64 @@ python -m flask run
 chmod +x make_prediction.sh
 ./make_prediction.sh
 ```
-
+![Run Prediction](/images/RunPrediction.png)
 5. Run script to create web app and first deployed to web app
 
 ```bash
- ./commands.sh
+chmod +x command.sh
+ ./command.sh
 ```
+![Run command](/images/RunCommand.png)
 
 > Step to trigger the CICD pipelines
 
 1. Go to Azure Devops > Create new project
+<br/>
 
 2. Go to Project Settings > Service Connections > New Service Connections
+![New Service Connection](/images/NewServiceConnection.png)
+<br/>
 
-> Screen shoots of the result
+3. Select Azure Resource Manager > Select your Resource Group and Subscription (Also checkbox Grant access permission to all pipelines)
 
-- Project running on Azure App Service
-![Project running on Azure App Service](./images/AppRunAppService.png)
+![Select Resource Group and Subscription](/images/SelectResourceGroupandSubscription.png)
+<br/>
 
-- Project cloned into Azure Cloud Shell
-![Project cloned into Azure Cloud Shell]()
+4. Back to project Pipelines > New pipeline > Select Github > Grant access to your github
 
-- Passing tests that are displayed after running the `make all` command from the `Makefile`
-![Passing tests that are displayed after running the `make all` command from the `Makefile`]()
+![Select store source code](/images/StoreSource.png)
+<br/>
 
-- Output of a test run
-![Output of a test run]()
+5. Select your repository > Select Configure template
 
-- Successful deploy of the project in Azure Pipelines.
-![Successful deploy of the project in Azure Pipelines](/images/Pipeline.png)
+![Select store source code](/images/SelectRepository.png)
+<br/>
 
-- Running Azure App Service from Azure Pipelines automatic deployment
-![Running Azure App Service from Azure Pipelines automatic deployment](/images/AppRunAppService.png)
+6. Successful deploy of the project in Azure Pipelines.
 
-- Successful prediction from deployed flask app in Azure Cloud Shell.
-![Successful prediction from deployed flask app in Azure Cloud Shell]()
+![Select store source code](/images/DeployPipeline.png)
+<br/>
 
-- The application running against a load test with locust.
+7. Project running on Azure App Service
+   
+![Select store source code](/images/DeployPipeline.png)
+<br/>
 
-Load test running:
-![Load test running](./images/LocustTest.png)
+8.  Web App with Azure Pipelines
+![Select store source code](/images/WebAppwithAzurePipelines.png)
+<br/>
 
-The output should look similar to this:
+9.  Web App Deployed Logs
+![Select store source code](/images/WebAppDeployedLogs.png)
+<br/>
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+10.  Output of streamed log files from deployed application Web App Stream Logs
 
-- Output of streamed log files from deployed application
-![Output of streamed log files from deployed application]()
+![Select store source code](/images/WebAppStreamLogs.png)
+<br/>
 
-## Enhancements
-
-> Future features to implement on this project:
-
+# Enhancements
 1. Upgrade to newer python version (example that I did is 3.8)
 2. Add configuration key by KeyVault.
 
-## Demo
-
-[Tutorial Video for this Project]()
+# Demo
