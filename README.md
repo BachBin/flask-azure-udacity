@@ -44,8 +44,7 @@ source ~/.manhbv-udacity/bin/activate
 cd flask-azure-udacity
 ```
 ![Create Virtual Env](/images/CreateVirtualEnv.png)
-![Alt text](image.png)
-3. Run the command to install the dependencies and run the app
+1. Run the command to install the dependencies and run the app
 
 ```bash
 make install
@@ -119,3 +118,4 @@ chmod +x command.sh
 2. Add configuration key by KeyVault.
 
 # Demo
+  [Video demo CICD](https://youtu.be/5ZwS2a0ZD08)
